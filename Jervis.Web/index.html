@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Showcase</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #c3fff1;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .video-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            background-color: rgb(246, 237, 226);
+        }
+
+        .video-box {
+            background-color: rgb(255, 255, 255);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        video {
+            width: 300px;
+            height: 450px;
+            border-radius: 30px;
+            cursor: pointer; /* Change cursor to pointer to indicate clickability */
+        }
+        .text{
+            margin-top: 10px;
+            width: 700px;
+            display: flex;
+            justify-content: center;
+            gap: 250px; /* Adjust the gap as needed */
+            background-color: #ffffff4a;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        nav{
+            background-color: #33333323;
+            width: 100%;
+            height:50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           text-align: right;
+           gap: 50px;
+           text-decoration: none;
+           color: #ffffff;
+        }
+        a{
+            text-decoration: none;
+            color: blueviolet;
+            font-size: medium;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        p{
+            font-size: medium;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <nav> 
+                
+                <a href="about.html">About</a>
+                <a href="index.html">Working</a>
+                <a href="https://github.com/tathagata2410/JerVisUpdated.git">Github</a>
+    </nav>
+    <h1>JERVIS Working</h1>
+    <div class="video-container">
+        <div class="video-box">
+            <video class="video" src="v2.mp4" type="video/mp4"></video>
+        </div>
+        <div class="video-box">
+            <video class="video" src="v3.mp4" type="video/mp4"></video>
+        </div>
+        <div class="video-box">
+            <video class="video" src="v4.mp4" type="video/mp4"></video>
+        </div>
+    </div>
+
+    <div class="text">
+        <p>Site Visiting</p>
+        <p>Music</p>
+        <p>News</p>
+        
+    </div>
+   
+    <script>
+        // Get all video elements
+        const videos = document.querySelectorAll('.video');
+
+        // Add click event listener to each video
+        videos.forEach(video => {
+            video.addEventListener('click', () => {
+                // Play the video if it is paused, or pause if it is playing
+                if (video.paused) {
+                    video.play();
+                } else {
+                    video.pause();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
